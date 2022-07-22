@@ -7,18 +7,6 @@ from time import gmtime
 from tabulate import tabulate
 from time import sleep
 
-def choose_emoji(weather):
-    match weather:
-        case "Cloudy":
-            return "🌤"
-        case "Sunny":
-            return "☀"
-        case "Rain":
-            return "🌧"
-        case "Snow":
-            return "🌨"
-        
-
 apiKey = "d54304ec664dc8d46491e6b29540f2bf"
 
 geolocator = Nominatim(user_agent="MyApp")
@@ -68,12 +56,6 @@ pollution_data = {
 
 print(pollution_data)
 
-
-emoji = choose_emoji(weather["main"])
-
-if emoji == None:
-    emoji = ""
-
 sunrise = str(strftime("%H:%M:%S", gmtime(current_data["sunrise"] + current_data["deltatime"])))
 sunset = str(strftime("%H:%M:%S", gmtime(current_data["sunset"] + current_data["deltatime"])))
 
@@ -82,7 +64,7 @@ table = [["Angaben in μg/m3", pollution_data['co'], pollution_data['o3'], pollu
 
 print(f"\n=========================================={location} WETTER======================================\n")
 sleep(2)
-print(f"Das aktuelle Wetter in {location} ist {emoji}{current_data['description']}. Die Temperatur beträgt {current_data['temp']}°C.")
+print(f"Das aktuelle Wetter in {location} ist {current_data['description']}. Die Temperatur beträgt {current_data['temp']}°C.")
 print(f"Die Luftfeuchtigkeit beträgt {current_data['humidity']}% und der Luftdruck liegt bei {current_data['pressure']}hPa.")
 sleep(1)
 print(f"Sonnenaufgang: {sunrise} Uhr")
