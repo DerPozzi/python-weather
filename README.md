@@ -12,3 +12,5 @@
 [x] get **lat** and **lon** of location,
 [x] fetch data for location from API,
 [x] display fetched data nicely
+
+# Forecast weather for 1 day
