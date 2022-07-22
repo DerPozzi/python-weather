@@ -7,7 +7,11 @@ from time import gmtime
 from tabulate import tabulate
 from time import sleep
 
-apiKey = "d54304ec664dc8d46491e6b29540f2bf"
+with open('key.txt', 'r') as f:
+    key = f.read()
+    apiKey = key
+    f.close()
+
 
 geolocator = Nominatim(user_agent="MyApp")
 
