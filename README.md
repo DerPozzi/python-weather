@@ -13,4 +13,8 @@
 [x] fetch data for location from API,
 [x] display fetched data nicely
 
-# Forecast weather for 1 day
+# Air Pollution
+
+[x] get pollution data for location
+[x] extract wanted information
+[x] display information in table
