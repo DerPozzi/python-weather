@@ -18,3 +18,10 @@
 [x] get pollution data for location
 [x] extract wanted information
 [x] display information in table
+
+# Modules
+
+- sys
+- requests
+- geopy
+- tabulate
