@@ -62,7 +62,7 @@ sunset = str(strftime("%H:%M:%S", gmtime(current_data["sunset"] + current_data["
 table = [["Angaben in μg/m3", pollution_data['co'], pollution_data['o3'], pollution_data['no'], pollution_data['no2'], pollution_data['nh3'], pollution_data['pm2_5']],["Airquality Index", pollution_data['index']]]
 
 
-print(f"\n=========================================={location} WETTER======================================\n")
+print(f"\n=========================================={location} Wetter======================================\n")
 sleep(2)
 print(f"Das aktuelle Wetter in {location} ist {current_data['description']}. Die Temperatur beträgt {current_data['temp']}°C.")
 print(f"Die Luftfeuchtigkeit beträgt {current_data['humidity']}% und der Luftdruck liegt bei {current_data['pressure']}hPa.")
