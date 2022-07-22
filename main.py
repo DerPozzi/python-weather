@@ -54,12 +54,10 @@ pollution_data = {
    "nh3" : components["nh3"]
 }
 
-print(pollution_data)
-
 sunrise = str(strftime("%H:%M:%S", gmtime(current_data["sunrise"] + current_data["deltatime"])))
 sunset = str(strftime("%H:%M:%S", gmtime(current_data["sunset"] + current_data["deltatime"])))
 
-table = [["Angaben in μg/m3", pollution_data['co'], pollution_data['o3'], pollution_data['no'], pollution_data['no2'], pollution_data['nh3'], pollution_data['pm2_5']],["Airquality Index", pollution_data['index']]]
+table = [["Angaben in μg/m3", pollution_data['co'], pollution_data['o3'], pollution_data['no'], pollution_data['no2'], pollution_data['nh3'], pollution_data['pm2_5']]]
 
 
 print(f"\n========================================== {location} Wetter =========================================================\n")
@@ -71,4 +69,4 @@ print(f"Sonnenaufgang: {sunrise} Uhr")
 print(f"Sonnenuntergang: {sunset} Uhr")
 print(f"\n========================================== {location} Luftqualität ================================================== \n")
 sleep(1)
-print(tabulate(table, headers=["", "CO²", "Ozon", "NO", "NO²", "Ammoniak", "Feinstaub"]))
+print(tabulate(table, headers=[f"Airqualitiy Index {pollution_data['index']}", "CO²", "Ozon", "NO", "NO²", "Ammoniak", "Feinstaub"]))
