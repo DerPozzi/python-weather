@@ -6,18 +6,18 @@
 
 # Pass in a location that gets turned into coordinates using geopy
 
-* [x] install python modules,
-* [x] connect with API,
-* [x] get userinput (Location),
-* [x] get **lat** and **lon** of location,
-* [x] fetch data for location from API,
-* [] display fetched data nicely
+* [X] install python modules,
+* [X] connect with API,
+* [X] get userinput (Location),
+* [X] get **lat** and **lon** of location,
+* [X] fetch data for location from API,
+* [X] display fetched data nicely
 
 # Air Pollution
 
-[x] get pollution data for location
-[x] extract wanted information
-[x] display information in table
+* [X] get pollution data for location
+* [X] extract wanted information
+* [X] display information in table
 
 # Modules
 
